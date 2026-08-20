@@ -11,4 +11,11 @@ title: L-crea's Blog
 
 ## 最近文章
 
-这里以后会放我的技术文章。
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </li>
+  {% endfor %}
+</ul>
